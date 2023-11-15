@@ -13,6 +13,9 @@ public class PerformanceTest {
         testPerformanceLinkedList();
         testPerformanceHashMap();
         testPerformanceLinkedHashMap();
+        testPerformanceTreeMap();
+        testPerformanceHashSet();
+        testPerformanceLinkedHashSet();
     }
 
     @Test
@@ -399,5 +402,161 @@ public class PerformanceTest {
         hashMap.remove(p3);
         end = System.nanoTime();
         System.out.println("Removing p3 element: " + (end - start) + " ns");
+    }
+
+    @Test
+    public void testPerformanceHashSet() {
+        System.out.println();
+        long start = System.nanoTime();
+        var hashSet = new HashSet<>();
+        for (int i = 0; i < 2000000; i++) {
+            if (i == 100) {
+                hashSet.add(100);
+            }
+            if (i == 1000000) {
+                hashSet.add(1000000);
+            }
+            if (i == 1999999) {
+                hashSet.add(1999999);
+            } else {
+                hashSet.add(BigDecimal.valueOf(Math.random()));
+            }
+        }
+        long end = System.nanoTime();
+        System.out.println("Creating LinkedList: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        hashSet.contains(100);
+        end = System.nanoTime();
+        System.out.println("Getting 100 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.contains(1000000);
+        end = System.nanoTime();
+        System.out.println("Getting 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.contains(1999999);
+        end = System.nanoTime();
+        System.out.println("Getting 1999999 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        hashSet.add(1);
+        end = System.nanoTime();
+        System.out.println("Adding 1 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.add(1000000);
+        end = System.nanoTime();
+        System.out.println("Adding 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.add(2000000);
+        end = System.nanoTime();
+        System.out.println("Adding 2000000 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        hashSet.remove(0);
+        end = System.nanoTime();
+        System.out.println("Removing by index 0 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.remove(1111111);
+        end = System.nanoTime();
+        System.out.println("Removing by index 1111111 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.remove(2000000);
+        end = System.nanoTime();
+        System.out.println("Removing by index 2000000 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        hashSet.remove(Integer.valueOf(1));
+        end = System.nanoTime();
+        System.out.println("Removing by value 100 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.remove(Integer.valueOf(1000000));
+        end = System.nanoTime();
+        System.out.println("Removing by value 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        hashSet.remove(Integer.valueOf(1999999));
+        end = System.nanoTime();
+        System.out.println("Removing by value 1999999 element: " + (end - start) + " ns");
+    }
+
+    @Test
+    public void testPerformanceLinkedHashSet() {
+        System.out.println();
+        long start = System.nanoTime();
+        var linkedHashSet = new LinkedHashSet<>();
+        for (int i = 0; i < 2000000; i++) {
+            if (i == 100) {
+                linkedHashSet.add(100);
+            }
+            if (i == 1000000) {
+                linkedHashSet.add(1000000);
+            }
+            if (i == 1999999) {
+                linkedHashSet.add(1999999);
+            } else {
+                linkedHashSet.add(BigDecimal.valueOf(Math.random()));
+            }
+        }
+        long end = System.nanoTime();
+        System.out.println("Creating LinkedList: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        linkedHashSet.contains(100);
+        end = System.nanoTime();
+        System.out.println("Getting 100 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.contains(1000000);
+        end = System.nanoTime();
+        System.out.println("Getting 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.contains(1999999);
+        end = System.nanoTime();
+        System.out.println("Getting 1999999 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        linkedHashSet.add(1);
+        end = System.nanoTime();
+        System.out.println("Adding 1 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.add(1000000);
+        end = System.nanoTime();
+        System.out.println("Adding 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.add(2000000);
+        end = System.nanoTime();
+        System.out.println("Adding 2000000 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        linkedHashSet.remove(0);
+        end = System.nanoTime();
+        System.out.println("Removing by index 0 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.remove(1111111);
+        end = System.nanoTime();
+        System.out.println("Removing by index 1111111 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.remove(2000000);
+        end = System.nanoTime();
+        System.out.println("Removing by index 2000000 element: " + (end - start) + " ns");
+
+        System.out.println();
+        start = System.nanoTime();
+        linkedHashSet.remove(Integer.valueOf(1));
+        end = System.nanoTime();
+        System.out.println("Removing by value 100 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.remove(Integer.valueOf(1000000));
+        end = System.nanoTime();
+        System.out.println("Removing by value 1000000 element: " + (end - start) + " ns");
+        start = System.nanoTime();
+        linkedHashSet.remove(Integer.valueOf(1999999));
+        end = System.nanoTime();
+        System.out.println("Removing by value 1999999 element: " + (end - start) + " ns");
     }
 }

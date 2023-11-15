@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.math.BigDecimal;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     private BigDecimal id;
     private String name;
@@ -59,5 +59,10 @@ public class Person {
                 .append("id", id)
                 .append("name", name)
                 .toString();
+    }
+
+    @Override
+    public int compareTo(Person p) {
+        return p.id.compareTo(this.id);
     }
 }
