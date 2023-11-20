@@ -1,4 +1,4 @@
-package edu.nm.concurrency.basicThreads;
+package edu.nm.concurrency.concurrency.basicThreads;
 
 import java.util.concurrent.Callable;
 

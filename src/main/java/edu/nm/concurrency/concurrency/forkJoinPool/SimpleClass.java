@@ -1,4 +1,4 @@
-package edu.nm.concurrency.forkJoinPool;
+package edu.nm.concurrency.concurrency.forkJoinPool;
 
 import java.util.concurrent.RecursiveTask;
 

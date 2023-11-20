@@ -1,14 +1,16 @@
-package edu.nm.concurrency.forkJoinPool;
+package edu.nm.concurrency.concurrency.forkJoinPool;
 
-import lombok.SneakyThrows;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.concurrent.RecursiveTask;
 
+@Service
 public class ValueSumCounter extends RecursiveTask<Integer> {
 
     private int[] array;
 
+    @Transactional
     public ValueSumCounter(int[] array) {
         this.array = array;
     }

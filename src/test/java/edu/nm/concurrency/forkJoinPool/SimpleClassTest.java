@@ -1,5 +1,6 @@
 package edu.nm.concurrency.forkJoinPool;
 
+import edu.nm.concurrency.concurrency.forkJoinPool.SimpleClass;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ForkJoinPool;
