@@ -1,6 +1,6 @@
 package edu.nm.concurrency.dateRace;
 
-import edu.nm.concurrency.concurrency.basicThreads.dateRace.Waiter;
+import edu.nm.concurrency.concurrency.dateRace.Waiter;
 import org.junit.jupiter.api.Test;
 
 public class WaiterTest {

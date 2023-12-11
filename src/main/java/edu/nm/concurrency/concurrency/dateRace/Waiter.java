@@ -1,6 +1,6 @@
 package edu.nm.concurrency.concurrency.dateRace;
 
-class Waiter implements Runnable {
+public class Waiter implements Runnable {
     private boolean shouldFinish;
 
     public void finish() {
