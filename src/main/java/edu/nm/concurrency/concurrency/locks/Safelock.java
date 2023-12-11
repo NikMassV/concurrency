@@ -1,11 +1,11 @@
-package edu.nm.concurrency.locks;
+package edu.nm.concurrency.concurrency.locks;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Safelock {
-    static class Friend {
+    public static class Friend {
         private final String name;
         private final Lock lock = new ReentrantLock();
 
@@ -63,7 +63,7 @@ public class Safelock {
         }
     }
 
-    static class BowLoop implements Runnable {
+    public static class BowLoop implements Runnable {
         private Friend bower;
         private Friend bowee;
 

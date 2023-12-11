@@ -1,10 +1,10 @@
 package edu.nm.concurrency.executorService;
 
+import edu.nm.concurrency.concurrency.basicThreads.MyCallable;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -25,20 +25,5 @@ public class ExecutorServiceTest {
         }
         System.out.println("FINISH");
         executorService.shutdown();
-    }
-}
-
-class MyCallable implements Callable<Long> {
-
-    @Override
-    public Long call() {
-        try {
-            System.out.println("Started: " + Thread.currentThread().getId());
-            Thread.sleep(1000 + Math.round(Math.random() * 5000));
-            System.out.println("Finished: " + Thread.currentThread().getId());
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return Thread.currentThread().getId();
     }
 }
