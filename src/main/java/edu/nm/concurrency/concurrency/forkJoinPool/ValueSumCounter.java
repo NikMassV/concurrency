@@ -10,7 +10,6 @@ public class ValueSumCounter extends RecursiveTask<Integer> {
 
     private int[] array;
 
-    @Transactional
     public ValueSumCounter(int[] array) {
         this.array = array;
     }
