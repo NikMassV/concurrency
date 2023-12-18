@@ -1,0 +1,10 @@
+The Goal:
+    Factory Method is a creational design pattern that provides an interface for creating objects in a superclass,
+but allows subclasses to choose the type of objects that will be created.
+
+Decision:
+    Delegation of instance creation another class
+
+Example:
+    - It is not known in advance which type need to create
+    - Class is projected thus created instances should have properties exact class

@@ -1,0 +1,9 @@
+Main OOP aspects
+
+1. Each system consists of objects
+2. Each object has state and behaviour
+3. Relationship types between objects
+- Inheritance is “IS-A” type of relationship
+- Composition is a "part-of" relationship
+- Association is a “has-a” type relationship
+- Aggregation is based is on "has-a" relationship
