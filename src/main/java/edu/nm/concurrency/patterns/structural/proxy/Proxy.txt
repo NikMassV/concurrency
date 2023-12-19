@@ -1,0 +1,12 @@
+The Goal:
+    Lets you provide a substitute or placeholder for another object.
+
+Decision:
+    Provides access control to object
+
+Example:
+    - Necessary to refer to object by different way from usual index
+        - Remote substitution
+        - Virtual substitution
+        - Protected substitution
+        - Smart link
