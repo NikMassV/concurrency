@@ -1,0 +1,9 @@
+The Goal:
+    Defines one-to-many dependency.
+
+Decision:
+    During changing one of the rest related objects other can be notificated
+
+Example:
+    - Low coupling
+    - Notification other object about changes
