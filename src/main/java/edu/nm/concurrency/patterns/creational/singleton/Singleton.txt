@@ -1,0 +1,8 @@
+The Goal:
+    Guarantees only one instance
+
+Decision:
+    For creation only one instance
+
+Example:
+    - for only one instance for the whole app
