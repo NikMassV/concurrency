@@ -1,0 +1,10 @@
+The Goal:
+    Linking of receiving objects to the chain and sending request by chain.
+
+Decision:
+    Separates sender from receiver thus provides possibility to handle
+    the request by several objects
+
+Example:
+    - Low coupling sender and receiver
+    - Additional flexibility at division of responsibilities
