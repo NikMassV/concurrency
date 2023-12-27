@@ -1,0 +1,9 @@
+The Goal:
+    Create interface for instantiating families of related objects for low coupling
+
+Decision:
+    For creation families of related objects
+
+Example:
+    - System should not depend on creation method, composite and providing input objects
+    -
