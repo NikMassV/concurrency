@@ -1,0 +1,8 @@
+The Goal:
+    Separate instance construction from representation
+
+Decision:
+    Creating complex object from one set of data
+
+Example:
+    - Creation order should not depend on object parts
