@@ -1,0 +1,8 @@
+The Goal:
+    Defines kind of objects
+
+Decision:
+    For creation copy of instances
+
+Example:
+    - Instances
