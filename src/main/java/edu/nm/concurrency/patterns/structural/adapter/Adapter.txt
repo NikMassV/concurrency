@@ -1,0 +1,9 @@
+The Goal:
+    Transform one interface to another which needs client
+
+Decision:
+    Provide possibility work different classes with inappropriate interfaces
+
+Example:
+    - interface of class which we wanna use doesn't correspond our needs
+    -
