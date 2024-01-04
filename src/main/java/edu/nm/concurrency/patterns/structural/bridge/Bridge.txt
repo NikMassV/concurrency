@@ -1,0 +1,11 @@
+The Goal:
+    Separate abstraction from implementation, so that we can change them independently
+
+Decision:
+    Get advantages of inheritance without sacrificing flexibility
+
+Example:
+    - Low coupling
+    - Expanding implementation and abstraction via subclasses
+    - Implementation changing should not affect client's abstractions
+    - Separating implementation between several objects
