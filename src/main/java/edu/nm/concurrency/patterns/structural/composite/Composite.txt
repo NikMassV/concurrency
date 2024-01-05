@@ -1,0 +1,8 @@
+The Goal:
+    Composite objects to tree-type structure
+
+Decision:
+    For grouping small components to larger, so that can be grouped into even larger structures
+
+Example:
+    - Providing hierarchy of objects
