@@ -1,0 +1,9 @@
+The Goal:
+    Dynamic adding new object responsibilities
+
+Decision:
+    In case alternative creating subclasses for extending functionality
+
+Example:
+    - Extending classes not available
+    - Dynamic adding new responsibilities to object
