@@ -1,0 +1,9 @@
+The Goal:
+    Provides unique interface instead of several system interfaces
+
+Decision:
+    To define high level interface that simplifies using subsystem
+
+Example:
+    - Isolate clients from subsystem components simplify work with subsystem
+    - Need in low coupling subsystem with clients

@@ -40,6 +40,7 @@ public class PerformanceTest {
         long end = System.nanoTime();
         System.out.println("Creating ArrayList: " + (end - start) + " ns");
 
+        Collections.synchronizedList();
         System.out.println();
         start = System.nanoTime();
         arrayList.get(100);
